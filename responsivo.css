@@ -1,0 +1,35 @@
+body{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    font-size: 25px;
+}
+.box{
+    margin: 10px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.box1{
+    width: 20%;                 /* 300px: dimensao L1920px - C1080px */
+    font-size: 1.5rem;          /* r = root, melhoria do "em". Que é o body 16px */
+    height: 100px;
+    margin-right: 20px;
+    background-color: #3498bd;
+}
+.box2{
+    width: 20%;                 /*30% */
+    /*font-size: 1em;             tam fonte corresponde 100% o elemento div PAI, "container" 28px */
+    font-size: 1.5em;             /*vai corresponder ao tamanho mais 50% do elemento div PAI, "container" 2px */
+    height: 100px;
+    background-color: #e74c3c;
+}
+@media (max-width: 600px) {
+    .container{
+        flex-direction: column;
+    }
+}
