@@ -7,4 +7,8 @@ criacao variaveis.
 dimensionamento header, content and footer many devices.
 testing size viewport (browser).
 MAnupulei as fontes para tamanhos diferentes.
+Comandos GIT no terminal:
+Git init
+Git status
+
 testar tamanhos de dispositivos no host para mobile...
