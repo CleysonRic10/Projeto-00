@@ -6,18 +6,30 @@
     <link rel="stylesheet" href="responsivo.css">
     <title>Document</title>
 </head>
-<body>
+<body class="hero">
     <header>
         <h1>Media Queries</h1>
+        <div class="viewport-debug"></div>
     </header>
-    <main class="content">
-        <div class="container">
-            <div class="box box1">Box 1 1rem - 300px</div>
-            <div class="box box2">Box 2 1em - 30%</div>
-        </div>
+    <main>
+        <!--img src="CapaPortfolio2.png" alt="Capa do Portfolio"-->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum.
+        </p>
     </main>
     <footer>
         <p>&copy; 2024</p>
     </footer>
+    <script>
+        const debug = document.querySelector(".viewport-debug");
+        function updateViewportSize() {
+            debug.textContent =
+            `Viewport: ${window.innerWidth} × ${window.innerHeight}`;
+        }
+        updateViewportSize();
+        window.addEventListener("resize", updateViewportSize);
+    </script>
 </body>
 </html>

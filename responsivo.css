@@ -1,81 +1,74 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-/*  display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    min-height: 100vh; 
-*/
-}
-html{
-    height: 300vh;
-    background-color: #FFFFFF;
-}
-body{
-    background-image: url(CapaPortfolio2.png);
-    height: 299vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-header, footer{
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-.content {
-    padding: 20px;
-    flex: 1;
-}
-.container{
-    display: flex;
-    font-size: 25px;
-}
-.box{
-    margin: 10px;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-.box1{
-    width: 20%;                 /* 300px: dimensao L1920px - C1080px */
-    font-size: 1.5rem;          /* r = root, melhoria do "em". Que é o body 16px */
-    height: 100px;
-    margin-right: 20px;
-    background-color: #3498bd;
-}
-.box2{
-    width: 20%;                 /*30% */
-    /*font-size: 1em;             tam fonte corresponde 100% o elemento div PAI, "container" 28px */
-    font-size: 1.5em;             /*vai corresponder ao tamanho mais 50% do elemento div PAI, "container" 2px */
-    height: 100px;
-    background-color: #e74c3c;
-}
-footer{
-    margin-top: auto;
+/* TOTAL 100vh = 1080px Comprimento variavel e 1920 Largura fixa. */
+/* USANDO 300vh na foto = 3240px */
+/* 100vh = 1080px - 16px (body) - 100px (header) - 50px (footer) = 914px */
+
+/* Para eu marter os componentes dentro do body */
+:root {
+  --alt-page: 300vh; /* Altura da imagem no body em vh (viewport de ALTURA) */
+  --size-fnt: 36px; /* Tamanho da fonte padrão */
 }
 
-/*@media (max-width: 600px) {
-    .container{
-        flex-direction: column;
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: var(--size-fnt);
+}
+
+body {
+    min-height: var(--alt-page); /* altura mínima do body */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: var(--alt-header);
+}
+
+main {
+    flex: 1; /* ocupa o espaço disponível */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    /* flex: 1; */
+    background-image: url("CapaPortfolio2.png"); /*Trocar foto de fundo: CapaPortfolio2.png - Vitoria62.png */
+    background-repeat:no-repeat;
+    background-position:unset;
+    background-size:contain;
+
+    max-width: 100%;
+    /* max-height: calc(var(--alt-image) - 100px - 80px); /* header + footer */
+    max-height: var(--alt-page);
+    height: auto;
+}
+
+footer {
+    height: var(--alt-footer);
+}
+
+/*                              LARGURA*/
+@media only screen and (max-width: 923px) { /* LARGURA: Dispositivos menores L x H */
+    :root {
+        --alt-page: 100vh;
     }
-}*/
-@media only screen and (max-width: 923px) {
     body{
         background-color: lightblue;
-    }
-    .container{
-        flex-direction: row;
+        /*font-size: calc( var(--size-fnt) - 16px); /* 20px */
+        font-size: .7rem;
     }
 }
-@media only screen and (max-width: 717px) {
+
+/*                              LARGURA*/
+@media only screen and (max-width: 717px) { /* 768px LARGURA: Tablets e dispositivos menores L x H */
+    :root {
+        --alt-page: 100vh;
+    }
     body{
         background-color: lightgreen;
-    }
-    .container{
-        flex-direction: column;
+        /*font-size: calc( var(--size-fnt) - 20px); /* 16px */
+        font-size: .6rem;
     }
 }
