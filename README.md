@@ -10,5 +10,13 @@ MAnupulei as fontes para tamanhos diferentes.
 Comandos GIT no terminal:
 Git init
 Git status
+Git add. 
+Git status
+Git commit -a -m "msg"
+Pasta local do computador, agora sincronizar com GitHub remoto (1a vez).
+git remote add origin https://github.com/...
+Enviar arquivos
+Git push add origin main 18:20
+
 
 testar tamanhos de dispositivos no host para mobile...
