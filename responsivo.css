@@ -93,7 +93,7 @@ footer {
 }
 
 /*                              LARGURA*/
-@media only screen and (max-width: 1560px) { /* 923px LARGURA: Tablets 1080Lx667A e mobile  L x H */
+@media only screen and (max-width: 1080px) { /* 1560px - 923px LARGURA: Tablets 1080Lx667A e mobile  L x H */
     :root {
         --alt-page: 100vh;
     }
