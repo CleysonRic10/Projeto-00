@@ -4,7 +4,8 @@
 
 /* Para eu marter os componentes dentro do body */
 :root {
-  --alt-page: 300vh; /* Altura da imagem no body em vh (viewport de ALTURA) */
+  --alt-page: 300vh; /* vh (viewport weight): ALTURA da imagem no body */
+  --lar-page: 100vw; /* vw (viewport width): LARGURA da imagem no body */
   --size-fnt: 36px; /* Tamanho da fonte padrão */
 }
 * {
@@ -16,11 +17,11 @@ html {
     font-family: "Poppins", sans-serif;
     font-size: var(--size-fnt);
 }
-
 body {    
+    /* resolucao padrao 1920x1080 de 1561Lx869A a imagem tem que cobrir 100% */
     display: flex;
     margin: 3px;
-    flex: 1 1 100vw;
+    flex: 1 1 var(--lar-page); /* vw (viewport width): largura da tela */
     flex-wrap: wrap;
     min-height: var(--alt-page); /* altura mínima do body */
     /* flex-direction: column; */
@@ -29,9 +30,8 @@ header, nav, main, footer {
     display: flex;
     margin: 3px;
 }
-
 header {
-    flex: 1 1 100vw;
+    flex: 1 1 var(--lar-page);
     /*height: var(--alt-header); */
     height: 100px;
     align-items: center;
@@ -73,7 +73,7 @@ main {
 }
 
 footer {
-    flex: 1 1 100vw;
+    flex: 1 1 var(--lar-page);
     /*height: var(--alt-footer);*/
     height: 100px;
 }
@@ -84,7 +84,7 @@ footer {
     background-repeat:no-repeat;
     background-position:unset;
     /* background-size:contain; */
-    background-size:contain;
+    background-size:cover;
 
     max-width: 100%;
     /* max-height: calc(var(--alt-image) - 100px - 80px); /* header + footer */
@@ -93,7 +93,7 @@ footer {
 }
 
 /*                              LARGURA*/
-@media only screen and (max-width: 923px) { /* LARGURA: Dispositivos menores L x H */
+@media only screen and (max-width: 1560px) { /* 923px LARGURA: Tablets 1080Lx667A e mobile  L x H */
     :root {
         --alt-page: 100vh;
     }
@@ -101,14 +101,18 @@ footer {
         background-color: lightgreen;
         /*font-size: calc( var(--size-fnt) - 16px); /* 20px */
         font-size: .6rem;
+        background-size:contain;
     }
     main{
         height: calc(var(--alt-page) - 330px); /* 436px em 13:55 */
     }
+    .hero {
+        background-size:contain;
+    }
 }
 
 /*                              LARGURA*/
-@media only screen and (max-width: 717px) { /* 768px LARGURA: Tablets e dispositivos menores L x H */
+@media only screen and (max-width: 717px) { /* 768px LARGURA: Tablets e mobile 432Lx810A  L x H */
     :root {
         --alt-page: 100vh;
     }
@@ -119,6 +123,9 @@ footer {
     }
     main{
         height: calc(var(--alt-page) - 436px); 
+    }
+    .hero {
+        background-size:contain;
     }
     nav{
         height: 100px; 
@@ -133,7 +140,6 @@ footer {
         position: fixed;
         right: 15px;
         top: 15px; 
-
     }
     nav {
         position: fixed;
