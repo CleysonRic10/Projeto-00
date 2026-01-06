@@ -8,8 +8,16 @@
 </head>
 <body class="hero">
     <header>
-        <h1>MENU</h1>
+        <!--a href="#" id="logo">Logo</a-->
         <div class="viewport-debug"></div>
+        <button id="openMenu">&#9776;</button>
+        <nav>
+            <button id="closeMenu">X</button>
+            <a href="#">Inicio</a>
+            <a href="#">Sobre</a>
+            <a href="#">Portfólio</a>
+            <a href="#">Contato</a>
+        </nav>
     </header>
     <main>
         <!--img src="CapaPortfolio2.png" alt="Capa do Portfolio"-->
@@ -23,6 +31,10 @@
         <p>&copy; 2024</p>
     </footer>
     <script>
+        
+        /* JS - 20:00 */
+
+        /* Debug viewport size */
         const debug = document.querySelector(".viewport-debug");
         function updateViewportSize() {
             debug.textContent =
@@ -30,6 +42,7 @@
         }
         updateViewportSize();
         window.addEventListener("resize", updateViewportSize);
+        /* Debug viewport size */
     </script>
 </body>
 </html>
