@@ -14,3 +14,9 @@
 A seguir:
     Existe um Menu desktop, porem quando mobile ele se retrai.
     Esse menu deve ser estilizado igual da versao paralela.
+
+07-Jan 
+    viewport Desktop
+        Secao da pagina Inicio foi dimensionado e posicionado o texto à direita com flexbox, igual o original.
+    viewport Mobile
+        Adapatar mesma funcao do Desktop em mobile...

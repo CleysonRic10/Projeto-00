@@ -6,7 +6,7 @@
 :root {
   --alt-page: 300vh; /* vh (viewport weight): ALTURA da imagem no body */
   --lar-page: 100vw; /* vw (viewport width): LARGURA da imagem no body */
-  --size-fnt: 36px; /* Tamanho da fonte padrão */
+  --size-fnt: 16px; /* Tamanho da fonte padrão 16px / 5 = 3.2vh */
 }
 * {
     margin: 0;
@@ -25,6 +25,7 @@ body {
     flex-wrap: wrap;
     min-height: var(--alt-page); /* altura mínima do body */
     /* flex-direction: column; */
+    font-size: 1.25rem;
 }
 header, nav, main, footer {
     display: flex;
@@ -64,13 +65,56 @@ nav a{
     font: 20pt; 
 }
 
+
+
 main {
-    flex: 20 1 500px;
-    /* flex: 1;  ocupa o espaço disponível */
-    height: calc(var(--alt-page) - 224px);  /*330px*/
-    justify-content: center;
-    align-items: center;
+    flex: 20 1 500px;                       
+    height: calc(var(--alt-page) - 224px);  /*330px */    
+    display: flex;
+    flex-direction: column; 
 }
+
+/* SECAO 1 */
+.container_super {
+    display: flex;
+    justify-content:center; 
+    align-content: flex-end;
+    padding: 100px 0px 0px 1120px; /*100px traz texto p/ baixo. 1120px traz para DIREITA */
+  }
+.item-direita {
+    /*border: 4px solid #312E81;   box */
+    border-left: 4px solid #312E81; /* borda lado esquerdo */
+    width: 100%;    /* espaco interno do box */
+    padding: 15px;  /* espaco entre o texto e os quatro cantos do box */
+  }
+.item-direita h1 {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #312E81;
+  }
+.item-direita p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #555;
+  }
+/* FIM SECAO 1 */
+
+  /* SECAO 2 */
+.container_inter {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start; 
+    align-content: flex-start;
+    padding: 0px 500px 500px 00px; /*100px traz texto p/ baixo. 1120px traz para DIREITA */
+  }
+/* FIM SECAO 2 */
+
+
+
+
+
 
 footer {
     flex: 1 1 var(--lar-page);
@@ -100,7 +144,7 @@ footer {
     body{
         background-color: lightgreen;
         /*font-size: calc( var(--size-fnt) - 16px); /* 20px */
-        font-size: .6rem;
+        font-size: 1.25rem;
         background-size:contain;
     }
     main{
@@ -108,6 +152,13 @@ footer {
     }
     .hero {
         background-size:contain;
+    }
+    /* SECAO INICIO */
+
+    /* FIM SECAO INICIO */
+
+    .texto-direita {
+        font-size: 1.25rem;
     }
 }
 
@@ -119,11 +170,20 @@ footer {
     body{
         background-color: lightblue;
         /*font-size: calc( var(--size-fnt) - 20px); /* 16px */
-        font-size: .55rem;
+        font-size: 1.25rem;
     }
     main{
         height: calc(var(--alt-page) - 436px); 
     }
+
+     .conteudo-main {
+        justify-content: center;
+    }
+
+    .texto-direita {
+        font-size: 1.15rem;
+    }
+
     .hero {
         background-size:contain;
     }
@@ -153,3 +213,4 @@ footer {
         display: none;
     }
 }
+
