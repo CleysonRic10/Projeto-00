@@ -17,6 +17,9 @@ A seguir:
 
 07-Jan 
     viewport Desktop
-        Secao da pagina Inicio foi dimensionado e posicionado o texto à direita com flexbox, igual o original.
+        Secao 1 foi dimensionado e posicionado o texto à direita com flexbox.
+        Secao 2 foi implantado conforme doc.
+        Inserir estilizacao do Menu...
+        Verificar uso do botao ou link Contato...
     viewport Mobile
         Adapatar mesma funcao do Desktop em mobile...

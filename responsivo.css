@@ -8,6 +8,7 @@
   --lar-page: 100vw; /* vw (viewport width): LARGURA da imagem no body */
   --size-fnt: 16px; /* Tamanho da fonte padrão 16px / 5 = 3.2vh */
 }
+/* ESTILO GERAL */
 * {
     margin: 0;
     padding: 0;
@@ -27,6 +28,17 @@ body {
     /* flex-direction: column; */
     font-size: 1.25rem;
 }
+.interface {
+    max-width: 1280px;
+    margin: auto;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+/* FIM ESTILO GERAL */
+/* CABECALHO */
 header, nav, main, footer {
     display: flex;
     margin: 3px;
@@ -64,22 +76,20 @@ nav a{
     margin: 3%;
     font: 20pt; 
 }
-
-
-
+/* FIM CABECALHO */
 main {
     flex: 20 1 500px;                       
     height: calc(var(--alt-page) - 224px);  /*330px */    
     display: flex;
     flex-direction: column; 
 }
-
 /* SECAO 1 */
-.container_super {
+section.inicio {
+/*.container_super { */
     display: flex;
     justify-content:center; 
-    align-content: flex-end;
-    padding: 100px 0px 0px 1120px; /*100px traz texto p/ baixo. 1120px traz para DIREITA */
+    align-content: flex-start;
+    padding: 100px 0px 600px 1120px; /*100px texto p/ baixo - 600 tam section -  1120px traz para DIREITA */
   }
 .item-direita {
     /*border: 4px solid #312E81;   box */
@@ -101,26 +111,60 @@ main {
   }
 /* FIM SECAO 1 */
 
-  /* SECAO 2 */
-.container_inter {
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-start; 
-    align-content: flex-start;
-    padding: 0px 500px 500px 00px; /*100px traz texto p/ baixo. 1120px traz para DIREITA */
-  }
+/* SECAO 2 */
+h2.titulo{
+    /* Minhas */
+    color: #0d0c23; 
+    font-size: 3.25rem;
+    font-weight: bolder;
+    text-align: center;
+}
+h2.titulo span{
+    /* Especialidades . */
+    color:#FFFFFF;
+    background-color: #0d0c23;
+}
+section.especialidades{
+    padding: 80px 4%; /* 80px desce a section */
+}
+section.especialidades .flex{
+    gap: 60px;
+}
+/* chama a section e a classe especialidades tambem... */
+.especialidades .especialidades-box{
+    color: #FFF;        
+    background-color: #0d0c23;      /* #312E81  #0d0c23 */
+    padding: 40px;
+    border-radius: 20px;
+    /* border: 2px solid #fff; */
+    margin-top: 45px;
+    transition: .2s;
+}
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff7b ;
+}
+.especialidades .especialidades-box i{
+    font-size: 70px;
+    color: #312E81;
+    background-color: #FFF;
+}
+.especialidades .especialidades-box h3{
+    font-size: 26px;
+    margin: 15px 0;
+}
 /* FIM SECAO 2 */
 
-
-
-
-
-
+/* RODAPÉ */
 footer {
     flex: 1 1 var(--lar-page);
     /*height: var(--alt-footer);*/
     height: 100px;
 }
+/* FIM RODAPÉ */
+
+
+
 
 .hero {
     /* flex: 1; */
@@ -135,6 +179,10 @@ footer {
     max-height: var(--alt-page);
     height: auto;
 }
+
+
+
+
 
 /*                              LARGURA*/
 @media only screen and (max-width: 1080px) { /* 1560px - 923px LARGURA: Tablets 1080Lx667A e mobile  L x H */
@@ -153,10 +201,6 @@ footer {
     .hero {
         background-size:contain;
     }
-    /* SECAO INICIO */
-
-    /* FIM SECAO INICIO */
-
     .texto-direita {
         font-size: 1.25rem;
     }
